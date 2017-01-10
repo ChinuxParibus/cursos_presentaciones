@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="revealAwesome/css/reveal.css">
+	<link rel="stylesheet" href="revealAwesome/css/theme/night.css">
+	<link rel="stylesheet" href="revealAwesome/plugin/highlight/styles/monokai_sublime.css">
+	<link rel="stylesheet" href="revealAwesome/lib/css/font-awesome/css/font-awesome.css">
+	<style>
+		#copyright{
+			-webkit-transform: rotate(180deg);
+			-ms-transform: rotate(180deg);
+			-o-transform: rotate(180deg);
+			transform: rotate(180deg);
+			display: inline-block;
+			line-height: 35px;
+		}
+		.footer{
+			position: absolute;
+			bottom: -350px;
+			left: 140px;
+		}
+		li{
+			font-size: 1.4em;
+			margin-bottom: 8px;
+		}
+	</style>
+	<title>Curso Angular.js</title>
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-background="revealAwesome/img/angularjs.jpg">
+				<div class="footer">
+					<p style="font-size: 69px;">Presentado por: Jhony Grillet</p>
+					<p><i id="copyright">&copy;</i>Copyleft Jhony Grillet</p>
+				</div>
+			</section>
+
+			<section>
+				<img src="revealAwesome/img/pregunta.jpg" height="300" width="300" alt="">
+				<h2>¿Qué es "La Piedra Angular"?</h2>
+			</section>
+
+			<section>
+				<ul style="float: left;">
+					<h1>Algunas respuestas...</h1>
+					<li class="fragment">Es la base de la construcción de un edificio.</li>
+					<li class="fragment">Ubica geográficamente la construcción.</li>
+					<li class="fragment">Se dice que es la piedra más importante, ya que sobre ella se colocan los demás elementos de la construcción.</li>
+					<li class="fragment">"Lo que otros desecharon, ha venido a ser cabeza del ángulo" -- <em>Salmo 118:22</em></li>
+					<li class="fragment">Y así, hay muchas creencias que giran en torno a este concepto...</li>
+				</ul>
+			</section>
+
+			<section>
+				<section>
+					<div style="float:left;">
+						<img src="revealAwesome/img/Angular.png" height="278" width="550">
+					</div>
+					<div style="float: left; margin-left: 20px;">
+						<h3><a href="#/5">Angular.js es...</a></h3>
+						<ul>
+							<li class="fragment">Un framework MV*</li>
+							<li class="fragment">Hecho por Google<sup style="font-size:0.75em;">&copy;</sup></li>
+							<li class="fragment">¿super-heróico?</li>
+							<li class="fragment">Orientado a Front-end.</li>
+							<li class="fragment">100% Javascript.</li>
+							<li class="fragment">De sintaxis específica (opinionated).</li>
+						</ul>
+					</div>
+				</section>
+				<section>
+					<img src="revealAwesome/img/fuuu.png" height="269" width="487" alt="">
+					<h1>¡Vas muy rápido!</h1>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h1>¿Qué sabemos?</h1>
+					<ol>
+						<li class="fragment">Javascript.</li>
+						<li class="fragment">Patrones de Diseño.</li>
+						<li class="fragment">Arquitectura.</li>
+						<li class="fragment">Prototipado.</li>
+						<li class="fragment">Desarrollo Orientado a Pruebas.</li>
+					</ol>
+				</section>
+				<section>
+					<h1>Javascript</h1>
+					<ol>
+						<li class="fragment">Interpretado y funcional</li>
+						<li class="fragment">Del navegador Web</li>
+						<li class="fragment">Orientado a Objetos</li>
+						<li class="fragment">Basado en Prototipos</li>
+						<li class="fragment">Débilmente Tipado</li>
+						<li class="fragment"><em>Duck types</em>, o tipado dinámico</li>
+						<li class="fragment">Imperativo</li>
+						<li class="fragment">Funciones variádicas</li>
+					</ol>
+				</section>
+				<section>
+					<h1>Patrones de Diseño Modulares</h1>
+					<ol>
+						<li class="fragment">Envoltorios <em>anónimos</em></li>
+						<li class="fragment"><em>Scopes</em> o múltiples alcances globales</li>
+						<li class="fragment"><em>Augmentation</em>, o crecimiento desmesurado</li>
+						<li class="fragment">Espaciado de nombres</li>
+						<li class="fragment">Clonación y Herencia</li>
+						<li class="fragment"><strong>Injección de Dependencias</strong></li>
+					</ol>
+				</section>
+				<section>
+					<h1>Arquitectura</h1>
+					<ol>
+						<li class="fragment">Monolítica</li>
+						<li class="fragment">Descomposición Modular</li>
+						<li class="fragment">Cliente-Servidor</li>
+						<li class="fragment">Pizarra</li>
+						<li class="fragment">Bus-Service</li>
+						<li class="fragment">Tres capas:
+							<ul>
+								<li class="fragment">MVC (Modelo-Vista-Controlador)</li>
+								<li class="fragment">MVT (Modelo-Vista-Template)</li>
+								<li class="fragment">MOV (Modelo-Observador-Vista)</li>
+								<li class="fragment"><strong>MV* (Modelo-Vista-*)</strong></li>
+							</ul>
+						</li>
+					</ol>
+				</section>
+				<section>
+					<h1>Prototipado</h1>
+					<ul>
+						<li class="fragment">Un objeto posee atributos y métodos. Un prototipo sólo posee argumentos.</li>
+						<li class="fragment">La cantidad de argumentos pueden ser modificados por sí mismos en un prototipo (Polimorfismo)</li>
+						<li class="fragment">Permite herencia múltiple y clonación, tanto de argumentos, como de prototipos</li>
+						<li class="fragment">Un prototipo es siempre global (<code>rootScope</code> o contexto principal) dentro del módulo en el que se crea</li>
+						<li class="fragment">De todos los conceptos de <em>OOP</em> se pueden sacar prototipos</li>
+						<li class="fragment">No existe encapsulamiento de prototipos</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Desarrollo Orientado a Pruebas</h2>
+					<ul>
+						<li class="fragment"></li>
+						<li class="fragment"></li>
+						<li class="fragment"></li>
+						<li class="fragment"></li>
+						<li class="fragment"></li>
+					</ul>
+					<a href="#/3">Atrás</a>
+				</section>
+			</section>
+
+			<section>
+				<h2>Un framework MV*</h2>
+				<img class="fragment" src="revealAwesome/img/mvw-arc.png" height="400" width="520" alt="">
+				<div class="fragment" style="font-size: 2em;position:absolute; top: 180px; left: 130px; z-index: 2;">datos---<span style="color: black;">></span> </div>
+				<div class="fragment" style="font-size: 2em;position:absolute; top: 180px; right: 80px; z-index: 2;"><span style="color: black;"><</span>---interfaz</div>
+				<div class="fragment" style="font-size: 2em;position:absolute; left: 380px; bottom: 60px; z-index: 2; color: black;">"cualquier cosa"</div>
+			</section>
+
+			<section>
+				<h2>Hecho por Google<sup style="font-size:0.75em;">&copy;</sup> </h2>
+				<img src="revealAwesome/img/angular-google.png" height="550" width="900" alt="">
+			</section>
+
+			<section>
+				<h2>¿súper heróico?</h2>
+				<h5 class="fragment">Angular.js permite...</h5>
+				<ol>
+					<li class="fragment">Mocking (prototipado rápido de UX)</li>
+					<li class="fragment">Auditabilidad E2E (End to End)</li>
+					<li class="fragment">Arquitecturas desacopladas</li>
+					<li class="fragment">Integración directa con HTTP</li>
+					<li class="fragment">AJAX Nativo</li>
+					<li class="fragment">Manipulación transversal del DOM <em>¡sin jQuery!</em></li>
+					<li class="fragment">Desarrollo de SPA (Single Page Applications)</li>
+					<li class="fragment">Acoplamiento con cualquier framework de desarrollo web <br>(CodeIgniter, Yii, Django, Ruby on Rails, etc.)</li>
+				</ol>
+			</section>
+
+			<section>
+				<h2>Orientado a Front-end</h2>
+				<img src="revealAwesome/img/front-end-angular.png" height="539" width="866" alt="">
+			</section>
+
+			<section>
+				<h1>100% Javascript</h1>
+				<ol>
+					<li class="fragment">No necesitas aprender otro lenguaje de programación</li>
+					<li class="fragment">HTML5 y CSS3 deseable (no limitativo)</li>
+					<li class="fragment">Aplicaciones híbridas</li>
+					<li class="fragment">Responsivo por defecto</li>
+				</ol>
+			</section>
+
+			<section>
+				<h2>De sintaxis específica (opinionated):</h2>
+				<h5 class="fragment">¡En Angular.js, TODO es un módulo!, y hay módulos...</h5>
+				<ol>
+					<li class="fragment">... para manipular comportamientos (<em>directivas</em>)</li>
+					<li class="fragment">... para compartir datos entre componentes (<em>fábricas</em>)</li>
+					<li class="fragment">... para crear interfaces de acceso a componentes (<em>servicios</em>)</li>
+					<li class="fragment">... para encapsular comportamientos (<em>controladores</em>)</li>
+					<li class="fragment">... para separar acceso a datos (<em>rutas</em>)</li>
+					<li class="fragment">... muchas cosas más.</li>
+				</ol>
+			</section>
+
+			<section>
+				<h2>Para mayor información:</h2>
+				<ul style="float: left;"><br>
+					<li><a class="roll" href="https://angularjs.org">Página principal de Angular.js</a></li><br>
+					<li><a class="roll" href="https://code.angularjs.org/1.3.20/docs/api">API de Angular.js</a> (version = 1.3.20)</li><br>
+					<li><a class="roll" href="http://codigofacilito.com/cursos/angularjs">Curso de Angular.js en Código Facilito</a> ( ;) )</li><br>
+					<li><a class="roll" href="https:jotaeseymas.wordpress.com">Mi blog</a> ~('.'~)</li><br>
+					<li><a class="roll" href="https://www.google.co.ve/?gws_rd=ssl#q=angularjs">Google...</a> (¬¬')</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>¿Que vamos a hacer?</h2>
+				<ol>
+					<li class="fragment"><strong>JSON</strong> (<em>JavaScript Object Notation</em>).</li>
+					<li class="fragment">Algunas directivas básicas ~ intermedias.</li>
+					<li class="fragment"><em><strong>Two Data-binding.</strong></em></li>
+					<li class="fragment">Controladores.</li>
+					<li class="fragment">Rutas.</li>
+					<li class="fragment">$http y peticiones AJAX.</li>
+					<li class="fragment">Test unitarios con Protractor Framework.</li>
+					<li class="fragment">Construir un Mocking de API RESTful.</li>
+				</ol>
+			</section>
+
+			<section>
+				<h2>¡Manos a la ubre!</h2>
+				<img src="revealAwesome/img/ubre-angular.jpg" height="503" width="670" alt="">
+			</section>
+		</div>
+	</div>
+
+	<!-- SECCION DE CARGA DE SCRIPTS -->
+	<script src="revealAwesome/lib/js/head.min.js"></script>
+	<script src="revealAwesome/js/reveal.js"></script>
+	<script>
+		Reveal.initialize({
+			width: 1200,
+			controls: true,
+			progress: true,
+			history: true,
+			transition: 'default',
+			rollingLinks: true,
+			dependencies: [
+				{
+					src: 'revealAwesome/plugin/highlight/highlight.pack.js',
+					async: true,
+					callback: function(){hljs.initHighlightingOnLoad();}
+				}
+			]
+		});
+	</script>
+</body>
+</html>

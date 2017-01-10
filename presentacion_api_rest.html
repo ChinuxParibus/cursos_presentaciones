@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="revealAwesome/css/reveal.css">
+	<link rel="stylesheet" href="revealAwesome/css/theme/night.css">
+	<link rel="stylesheet" href="revealAwesome/plugin/highlight/styles/monokai_sublime.css">
+	<style>
+		figure { display: table; }
+		img, figcaption { display: table-cell; vertical-align: middle ;}
+	</style>
+	<title>El Poder de las API REST</title>
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-background="revealAwesome/img/rangers-background.jpg">
+				<h1>El Poder de las <br> API REST</h1><span style="font-size: 2.5em; margin-top: 300px; display: block;">Jhony Grillet</span>
+			</section>
+
+			<section>
+				<img src="revealAwesome/img/me.jpg" height="200" width="200" alt="">
+				<h2>Jhony Grillet</h2>
+				<p>Desarrollador Javascript</p>
+				<span>(a.k.a. <a href="#">Ch1nux Par1bus</a>)</span><br><br>
+				<figure style="float: left; margin: 0 2em 2em 9em;">
+					<img src="revealAwesome/img/github.jpg" height="100" width="100" alt="" style="vertical-align: middle;">
+					<figcaption><a href="http://github.com/chinuxparibus">chinuxparibus</a></figcaption>
+				</figure>
+				<figure style="float: left; margin: 0 2em 2em 0;">
+					<img src="revealAwesome/img/twitter.jpg" height="100" width="100" alt="" style="vertical-align: middle;">
+					<figcaption><a href="http://twitter.com/ch1nux">@ch1nux</a></figcaption>
+				</figure>
+				<figure style="float: left; margin: 0 2em 2em 0;">
+					<img src="revealAwesome/img/wordpress.jpg" height="100" width="100" alt=""><figcaption><a href="http://jotaeseymas.wordpress.com">jotaeseymas</a></figcaption>
+				</figure>
+			</section>
+
+			<section>
+				<h1>¡Advertencia!</h1>
+				<img src="revealAwesome/img/memes-memes-everywhere.jpg" height="500" width="500" alt="">
+			</section>
+
+			<section>
+				<h2>¿Algun@ se acuerda de esto?</h2>
+				<video src="Mighty Morphin Power Rangers First Fight and Morph.mp4"
+				width="800"></video><br>
+				<h2>¡Yo si!</h2>
+			</section>
+
+			<section>
+				<h2>El Poder de las API REST</h2><br>
+				<div >
+					<ol style="float: left;">
+						<li class="fragment" style="font-size: 1.8em; margin-bottom: 0.5em;">¿Qué es una API?</li>
+						<li class="fragment" style="font-size: 1.8em; margin-bottom: 0.5em;">¿Qué es y que NO es REST?</li>
+						<li class="fragment" style="font-size: 1.8em; margin-bottom: 0.5em;">Tipos de API REST</li>
+						<li class="fragment" style="font-size: 1.8em; margin-bottom: 0.5em;">Datos interesantes...</li>
+						<li class="fragment" style="font-size: 1.8em; margin-bottom: 0.5em;">API REST y Gobierno Abierto</li>
+						<li class="fragment" style="font-size: 1.8em; margin-bottom: 0.5em;">API REST y el Software Libre</li>
+					</ol>
+					<img class="fragment" style="float: left;" src="revealAwesome/img/logo_14.jpg" alt="" width="300">
+				</div>
+			</section>
+
+			<section>
+				<h2>¿Qué es una API?</h2>
+				<p class="fragment">Es el punto de partida, las armas de todo desarrollador</p>
+				<img class="fragment" src="revealAwesome/img/power_rangers_weapons_by_lygerzero-d3bfgzy.jpg" height="480" width="640" alt="">
+			</section>
+
+			<section>
+				<h2>¿Qué es una API?</h2><br>
+				<ul>
+					<li class="fragment" style="font-size: 1.5em; line-height: 1.5em; margin-bottom: 0.5em;">Application Programming Interface (o Interfaz de programación de aplicaciones)</li><br>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Comprende todas las funcionalidades de una aplicación</li><br>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Orientadas por la arquitectura de desarrollo</li><br>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Pueden ser públicas o privadas</li><br>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Independientes del lenguaje de programación.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>¿Qué es una API?</h2>
+				<p class="fragment" style="font-size: 1.5em;">API = ZORDON</p>
+				<div>
+				<img class="fragment" src="revealAwesome/img/zordon-rest.jpg" width="400" alt="" style="float: left;">
+					<ul><br><br><br>
+						<li class="fragment" style="font-size: 1.2em;">Es el que manda</li><br>
+						<li class="fragment" style="font-size: 1.2em;">Es el que les da el poder</li><br>
+						<li class="fragment" style="font-size: 1.2em;">Es el que sabe lo que puede hacer cada uno</li><br>
+						<li class="fragment" style="font-size: 1.2em;"><strong>¡Es el JEFE!</strong></li>
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<h2>¿Qué NO es REST?</h2><br>
+				<div>
+				<img src="revealAwesome/img/powerrangers.gif" width="400" alt="" style="float: left;">
+					<ul><br>
+						<li class="fragment" style="font-size: 1.2em;">NO es un CRUD...</li><br>
+						<li class="fragment" style="font-size: 1.2em;">NO es una aplicación...</li><br>
+						<li class="fragment" style="font-size: 1.2em;">NO es un lenguaje de programación...</li><br>
+						<li class="fragment" style="font-size: 1.2em;">NO es un protocolo...</li><br>
+						<li class="fragment" style="font-size: 1.2em;">NO es una API...</li>
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<h2>¿Qué es REST?</h2><br>
+				<ul>
+					<li class="fragment" style="font-size: 1.2em; margin-bottom: 0.5em;">REpresentational State Transfer (Transferencia de Estado Representacional).</li>
+					<li class="fragment" style="font-size: 1.2em; margin-bottom: 0.5em;">Es un estilo arquitectónico.</li>
+					<li class="fragment" style="font-size: 1.2em; margin-bottom: 0.5em;">Tiene su propia semántica, independiente de los lenguajes de programación.</li>
+					<li class="fragment" style="font-size: 1.2em; margin-bottom: 0.5em;">Basado en el Protocolo HTTP.</li>
+					<li class="fragment" style="font-size: 1.2em; margin-bottom: 0.5em;">Cualquier API puede estar basada en éste.</li>
+					<li class="fragment" style="font-size: 1.2em; margin-bottom: 0.5em;">Creado por Roy Fielding, PhD en Computación de la Universidad Irvin de California, en el año 2000.</li>
+					<li class="fragment" style="font-size: 1.2em; margin-bottom: 0.5em;">Ideal para sistemas distribuidos.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>¿Qué es REST?</h2>
+				<h3 class="fragment">Cliente - Servidor</h3>
+				<img class="fragment" src="revealAwesome/img/power-ranger-tech-support-YOSPOS-green-ranger-tried-summoning-the-dragonzord-1429224494Y.jpg" height="570" width="460" alt="">
+			</section>
+
+			<section>
+				<h2>¿Qué es REST?</h2>
+				<h3 class="fragment">No posee estados</h3>
+				<img src="revealAwesome/img/all-power-rangers-ever-o.gif" width="900" alt="" class="fragment">
+			</section>
+
+			<section>
+				<h2>¿Qué es REST?</h2>
+				<h3 class="fragment">Recursos uniformes y bien definidos</h3>
+				<img src="revealAwesome/img/45548-Fabulous-meme--mighty-Morphin-OqpG.jpeg" width="800" alt="" class="fragment">
+			</section>
+
+			<section>
+				<h2>¿Qué es REST?</h2>
+				<h3 class="fragment">Sintaxis universal de identificación de recursos</h3>
+				<img src="revealAwesome/img/All-Red-Power-Rangers.jpg" width="1024" alt="" class="fragment">
+			</section>
+
+			<section>
+				<h2>Tipos de API REST</h2><br>
+				<ol>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Orientada a Datos</li>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Orientada a Servicios</li>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Orientada a Hypermedia</li>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Orientada a Detección</li>
+				</ol>
+			</section>
+
+			<section>
+				<h2>1. Orientada a Datos</h2><br>
+				<ul>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Cada recurso es un dato o una colección de datos</li>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Los datos son paginables <br><br><code class="fragment">datos.com/data?page=20&limit=5</code></li>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Rápida en peticiones, "lenta" en masificaciones</li>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Poco consumo de ancho de banda, alta demanda <br><br>transaccional</li>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Alto rendimiento de intercambio de información</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>2. Orientada a Servicios</h2><br>
+				<ul>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Cada recurso es un método a ser procesado en otro <br>servidor</li>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">No es paginable pero si parametrizable <br><br><code class="fragment">datos.com/metodo?valor1="valor"&valor2=2&token=5b...</code></li>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Lenta en peticiones, "más lenta" en masificaciones</li>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Elevado consumo de ancho de banda, con alta demanda <br><br>transaccional</li>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Rendimiento de intercambio de información supeditado <br><br>a la conexión cliente-servidor</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>3. Orientada a Hypermedia</h2><br>
+				<ul>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Cada recurso es un multimedia (video, imagen, audio, <br><br>streaming, etcétera)</li>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">No es paginable, ya que cada recurso es un elemento <br><br> multimedia específico</code></li>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Lenta en peticiones, muy rápida en masificaciones <br><br> (altamente "cacheable")</li>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Elevado consumo de ancho de banda, con baja demanda <br><br> transaccional</li>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Alto rendimiento de intercambio de información</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>4. Orientada a Detección</h2><br>
+				<ul>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Cada recurso es un "caché de recursos" pre-procesados</li><br>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Paginable, parametrizable y altamente configurable</code></li><br>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Suele procesar peticiones en "tiempo real"</li><br>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Alta demanda transaccional</li><br>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Muy alto rendimiento en el intercambio de información</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Algunos ejemplos notables...</h2>
+				<img class="fragment" src="revealAwesome/img/facebook_twitter_logo_combo1.png" width="270" alt="">&nbsp;
+				<img class="fragment" src="revealAwesome/img/OpenWeatherMap_logo.png" width="200" alt="">&nbsp;
+				<img class="fragment" src="revealAwesome/img/twitch_logo.jpg" width="350" alt="">&nbsp;
+				<img class="fragment" src="revealAwesome/img/google-maps-standing.png" width="270" alt="">
+			</section>
+
+			<section>
+				<h2>Algunos datos interesantes...</h2><br>
+				<ol>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">El gobierno de los E.E.U.U. tiene más de 100 mil API REST (públicas y/o privadas, mayormente orientadas a datos)</li>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">El término de búsqueda API REST en Google produce más de 60 millones de resultados (y sigue en aumento)</li>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Existe un <a href="http://atlas.cid.harvard.edu/">atlas</a> de complejidad económica basado en API REST (¡y dirigida por un venezolano!)</li>
+				</ol>
+			</section>
+
+			<section>
+				<h2>Algunos datos interesantes...</h2><br>
+				<h3>Google Trends: API REST vs API SOAP</h3>
+				<img src="revealAwesome/img/dato_interesante.png" width="800" alt="">
+			</section>
+
+			<section>
+				<h2>API REST y Gobierno Abierto</h2><br>
+				<h3>En el viejo continente...</h3><br>
+				<ul>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;"><strong>Holanda:</strong> API REST de salud para universalizar las historias médicas de los pacientes.</li>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;"><strong>Escocia e Irlanda del Norte:</strong> API REST de datos judiciales. Recopilación de leyes e historial de casos de interdicción civil</li>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;"><strong>Islas Canarias:</strong> Universalización de la gestión municipal mediante API REST interoperadas</li>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;"><strong>India:</strong> Registro público de más de 5 mil API REST (de todos los tipos) alojadas en servidores en ese país</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>API REST y Gobierno Abierto</h2><br>
+				<h3>...de este lado del charco</h3>
+				<ul>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;"><strong>Guatemala:</strong> API REST anti-corrupción donde se muestra periódicamente la inversión pública</li>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;"><strong>Panamá:</strong> Núcleo de transacciones bancarias único y universal (independiente de las plataformas de las agencias bancarias)</li>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;"><strong>Argentina y Chile:</strong> Sistema universal de elecciones. Resultados en tiempo real (API REST de detección)</li>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;"><strong>Colombia:</strong> API REST de detección para seguimiento y control de rutas de transporte público masivo (¡es Ley!)</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>API REST y Gobierno Abierto</h2>
+				<h3 class="fragment">En Venezuela, tenemos varios enemigos a vencer...</h3>
+				<img src="revealAwesome/img/OQOCyJF.jpg" width="600" alt="" class="fragment">
+			</section>
+
+			<section>
+				<h2>API REST y Gobierno Abierto</h2>
+				<h3>Burocracia...</h3>
+				<img src="revealAwesome/img/f-1.jpg" width="500" alt="">
+			</section>
+
+			<section>
+				<h2>API REST y Gobierno Abierto</h2>
+				<h3>Trampa de "confidencialidad"...</h3>
+				<img src="revealAwesome/img/goldar.jpg" width="500" alt="">
+			</section>
+
+			<section>
+				<h2>API REST y Gobierno Abierto</h2>
+				<h3>Conflicto de intereses...</h3>
+				<img src="revealAwesome/img/greenvsred.jpg" width="500" alt="">
+			</section>
+
+			<section>
+				<h2>API REST y Gobierno Abierto</h2>
+				<h3>"Mala" Crítica...</h3>
+				<img src="revealAwesome/img/Bulk_y_Skull_(MM).jpg" width="500" alt="">
+			</section>
+
+			<section>
+				<h2>API REST y Gobierno Abierto</h2>
+				<h3>Centralización...</h3>
+				<img src="revealAwesome/img/rita_fuego.gif" width="480" alt="">
+			</section>
+
+			<section>
+				<h2>API REST y el Software Libre</h2>
+				<h3>¡Hay para elegir!</h3>
+				<img src="revealAwesome/img/all-rangers-in-da-club.jpg" width="700" alt="">
+			</section>
+
+			<section>
+				<h2>API REST y el Software Libre</h2>
+				<h3>¡Hay para elegir!</h3>
+				<img src="revealAwesome/img/redis.png" height="200" width="200" alt="" class="fragment">&nbsp;
+				<img src="revealAwesome/img/golang.png" height="200" width="200" alt="" class="fragment">&nbsp;
+				<img src="revealAwesome/img/RethinkDB-Thinker-e1440050673654.png" height="200" width="200" alt="" class="fragment">&nbsp;
+				<img src="revealAwesome/img/mongodb-logo-png-just-icon.png" height="200" width="200" alt="" class="fragment">&nbsp;
+				<img src="revealAwesome/img/favicon-angular.png" height="200" width="200" alt="" class="fragment"><br>
+				<img src="revealAwesome/img/torodb.jpg" height="200" width="200" alt="" class="fragment">&nbsp;
+				<img src="revealAwesome/img/hapijs.png" height="200" width="200" alt="" class="fragment">&nbsp;
+				<img src="revealAwesome/img/python-logo.png" height="200" width="200" alt="" class="fragment">&nbsp;
+				<img src="revealAwesome/img/elephpant.gif" height="200" width="200" alt="" class="fragment">&nbsp;
+				<img src="revealAwesome/img/Unofficial_JavaScript_logo_2.svg.png" height="200" width="200" alt="" class="fragment">
+			</section>
+
+			<section>
+				<p style="text-align: left; font-size: 2em;">"Mucha gente pequeña, en lugares pequeños, haciendo cosas pequeñas, puede cambiar el mundo."</p><br>
+				<h2 class="fragment">Eduardo Galeano</h2>
+			</section>
+
+			<section>
+				<h2>¡Salvemos al mundo... unidos!</h2>
+				<img src="revealAwesome/img/PowerRangers.jpg" width="700" alt="">
+				<h2>¿Preguntas?</h2>
+			</section>
+
+		</div>
+	</div>
+
+	<!-- SECCION DE CARGA DE SCRIPTS -->
+	<script src="revealAwesome/lib/js/head.min.js"></script>
+	<script src="revealAwesome/js/reveal.js"></script>
+	<script>
+		Reveal.initialize({
+			width: 1200,
+			controls: true,
+			progress: true,
+			history: true,
+			transition: 'default',
+			rollingLinks: true,
+			dependencies: [
+				{
+					src: 'revealAwesome/plugin/highlight/highlight.pack.js',
+					async: true,
+					callback: function(){hljs.initHighlightingOnLoad();}
+				}
+			]
+		});
+	</script>
+
+</body>
+</html>

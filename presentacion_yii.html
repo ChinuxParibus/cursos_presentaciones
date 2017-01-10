@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" type="image/x-icon" href="revealAwesome/img/favicon-yii.png">
+	<link rel="stylesheet" href="revealAwesome/css/reveal.css">
+	<link rel="stylesheet" href="revealAwesome/css/theme/sky.css">
+	<link rel="stylesheet" href="revealAwesome/plugin/highlight/styles/monokai_sublime.css">
+	<link rel="stylesheet" href="revealAwesome/lib/css/font-awesome/css/font-awesome.css">
+	<style>
+		#copyright{
+			-webkit-transform: rotate(180deg);
+			-ms-transform: rotate(180deg);
+			-o-transform: rotate(180deg);
+			transform: rotate(180deg);
+			display: inline-block;
+			line-height: 35px;
+		}
+	</style>
+	<title>Curso Yii Framework</title>
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+			<section>
+				<img src="revealAwesome/img/yii.png" height="150" width="150">
+				<h3>Aprendiendo Yii Framework</h3><small><i id="copyright">&copy;</i>
+				Copyleft Jhony Grillet</small>
+			</section>
+
+			<section>
+				<h2 class="fragment">Objetivo General:</h2>
+				<p class="fragment" style="text-align:justify;">Desarrollar una aplicación que ilustre los componentes y el flujo de trabajo del Framework PHP Yii</p><br>
+				<h3 class="fragment">Objetivos Específicos:</h3>
+				<ol>
+					<li class="fragment">Ilustrar la arquitectura de Yii Framework</li>
+					<li class="fragment">Ilustrar el flujo de trabajo de Yii Framework</li>
+					<li class="fragment">Ilustrar el flujo de comp. internos en Yii Framework</li>
+					<li class="fragment">Ilustrar el uso de comp. externos en Yii Framework</li>
+					<li class="fragment">Ilustrar el desarrollo front-end con Yii Framework</li>
+				</ol>
+			</section>
+
+			<section>
+				<h2>Día 1. <br> Ilustrar la <br> Arquitectura de <br>Yii Framework</h2>
+			</section>
+
+			<section>
+				<img src="revealAwesome/img/chal-ac.jpg" height="300" width="300">
+				<h3>Por qué un Framework??</h3>
+				<ul>
+					<li class="fragment">Tengo mi desarrollo claro (Caso PHP)</li>
+					<li class="fragment">Tengo años en desarrollo...</li>
+					<li class="fragment">Tengo *sistemas ya desarrollados</li>
+					<small class="fragment"><code>* ...prototipos</code></small>
+				</ul>
+			</section>
+
+			<section>
+				<ul><li>Para evitar esto...</li></ul>
+				<pre>
+					<code class="php" data-trim>
+&lt;?php $XnNhAWEnhoiqwciqpoHH=file(
+__FILE__);eval(base64_decode("aWYoIWZ1bmN0aW9uX2V4aXN0cygiWWl1bklVWTc2YkJodWhOW
+UlPOCIpKXtmdW5jdGlvbiBZaXVuSVVZNzZiQmh1aE5ZSU84KCRnLCRiPTApeyRhPWltcGxvZGUoIlxu
+IiwkZyk7JGQ9YXJyYXkoNjU1LDIzNiw0MCk7aWYoJGI9PTApICRmPXN1YnN0cigkYSwkZFswXSwkZFs
+xXSk7ZWxzZWlmKCRiPT0xKSAkZj1zdWJzdHIoJGEsJGRbMF0rJGRbMV0sJGRbMl0pO2Vsc2UgJGY9dH
+JpbShzdWJzdHIoJGEsJGRbMF0rJGRbMV0rJGRbMl0pKTtyZXR1cm4oJGYpO319"));eval(
+base64_decode(YiunIUY76bBhuhNYIO8($XnNhAWEnhoiqwciqpoHH)));eval(
+ZsldkfhGYU87iyihdfsow(YiunIUY76bBhuhNYIO8($XnNhAWEnhoiqwciqpoHH,2)
+,YiunIUY76bBhuhNYIO8($XnNhAWEnhoiqwciqpoHH,1)));__halt_compiler();aWYoIWZ1bmN0a
+W9uX2V4aXN0cygiWnNsZGtmaEdZVTg3aXlpaGRmc293Iikpe2Z1bmN0aW9uIFpzbGRrZmhHWVU4N2l5
+aWhkZnNvdygkYSwkaCl7aWYoJGg9PXNoYTEoJGEpKXtyZXR1cm4oZ3ppbmZsYXRlKGJhc2U2NF9kZWN
+vZGUoJGEpKSk7fWVsc2V7ZWNobygiRXJyb3I6IEZpbGUgTW9kaWZpZWQiKTt9fX0=942c052498f9bc
+239e533f57a5e323535f35593aS03OyFdQysjPSVTILc1LyVeyBgA=
+					</code>
+				</pre>
+			</section>
+
+			<section>
+				<section>
+					<h3>Usas un Framework?? ... Genial!!</h3>
+					<div>
+						<img src="revealAwesome/img/CakePHP.jpg" width="200" class="fragment">
+						<img src="revealAwesome/img/7b937a43bb67901.jpg" width="200" alt="" class="fragment">
+						<img src="revealAwesome/img/2hz6eqc.jpg" alt="" class="fragment" width="200">
+						<img src="revealAwesome/img/phalcon.jpg" width="200" alt="" class="fragment">
+						<img src="revealAwesome/img/Code_igniter.png" height="180" width="200" alt="" class="fragment">
+						<img src="revealAwesome/img/akelos.jpg" width="200" alt="" class="fragment">
+						<img src="revealAwesome/img/zend-logo.png" width="200" alt="" class="fragment">
+						<img src="revealAwesome/img/logo-kumbiaphp.png" width="200" alt="" class="fragment">
+						<img src="revealAwesome/img/photo.jpg" width="200" alt="" class="fragment">
+						<img src="revealAwesome/img/slim-logo.png" width="200" alt="" class="fragment">
+						<img src="revealAwesome/img/symfony2logo.png" width="200" alt="" class="fragment">
+						<img src="revealAwesome/img/FuelPHP_logo.png" width="200" alt="" class="fragment">
+					</div>
+				</section>
+				<section>
+					Cuál Framework debo usar???
+					<img src="revealAwesome/img/jackie.jpg" height="500" width="700">
+				</section>
+			</section>
+
+			<section>
+				<div style="float: left;"><img src="revealAwesome/img/God.png" height="400"></div>
+				<div>Un Framework debería ser: <br><br>
+					<ul>
+						<li class="fragment">Rápido para desarrollar.</li>
+						<li class="fragment">Escalable.</li>
+						<li class="fragment">Fácil de aprender.</li>
+						<li class="fragment">Mucha documentación.</li>
+						<li class="fragment">Robusto.</li>
+						<li class="fragment">Soporte a múltiples BD.</li>
+						<li class="fragment"><a href="http://es.wikipedia.org/wiki/Mapeo_objeto-relacional">ORM.</a></li>
+						<li class="fragment">...y un largo etcétera!</li>
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<img src="revealAwesome/img/pregunta.jpg" width="450" alt="">
+				<h2>Por qué Yii Framework??</h2>
+			</section>
+
+			<section>
+				<img style="float:left;" src="revealAwesome/img/yii.png" height="150" width="150">
+				<h2 style="float:right; font-size: 3em; line-height: 160px;"><strong>Yii Framework</strong></h2>
+				<div style="clear: both;">
+					<ul>
+						<li class="fragment"><span style="color:red;">Rápido</span>, <span style="color:green;">seguro</span> y <span style="color:navy;">profesional</span>.</li>
+						<p class="fragment">Es <span style="color:red;">rápido</span> porque su modelo basado en componentes sólo carga lo necesario cuando es solicitado</p>
+						<p class="fragment">Es <span style="color:green;">seguro</span> porque incluye protección nativa contra XSS, Cross Scripting Request Forgery y SQL Injection</p>
+						<p class="fragment">Es <span style="color:navy;">profesional</span> porque permite la reutilización de código, agilizando el desarrollo de aplicaciones</p>
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<img style="float:left;" src="revealAwesome/img/yii.png" height="150" width="150">
+				<h2 style="float:right; font-size: 3em; line-height: 160px;"><strong>Yii Framework</strong></h2>
+				<div style="clear:both;">
+					<ul>
+						<li class="fragment">Soporte nativo a jQuery (AJAX)</li>
+						<li class="fragment">Sistema de cacheo avanzado</li>
+						<li class="fragment">Patrón de Arquitectura MVC</li>
+						<li class="fragment">Soporte a Múltiples Bases de Datos</li>
+						<li class="fragment">Modelo basado en componentes</li>
+						<li class="fragment">Integración (casi) automática con Bootstrap CSS</li>
+						<li class="fragment">Miles de componentes externos</li>
+						<li class="fragment">Reutilización de código</li>
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<h2>ME GUSTA!!!</h2>
+				<img src="revealAwesome/img/me_gusta.jpg" height="512" width="512">
+			</section>
+
+			<section>
+				<img style="float: left;" src="revealAwesome/img/nah.png" height="296" width="288"><h2><p>Todo eso está muy bien pero... Por donde empiezo???</p></h2>
+			</section>
+
+			<section>
+				<span style="float: left;"><h1>Fácil...</h1></span><br>
+				<div style="clear: both;"></div>
+				<ol>
+					<li class="fragment">Descargando Yii <a href="http://www.yiiframework.com/download/">aquí</a>.</li>
+					<li class="fragment">Descomprimir el archivo descargado en cualquier directorio.</li>
+					<li class="fragment">En consola, ubicar el directorio donde se instaló</li>
+					<li class="fragment">Ejecutar: <pre style="display: inline;">[nombre/del/directorio]/framework/yiic webapp /var/www/[nombre_app]</pre></li>
+					<li class="fragment">Responder [Y]</li>
+					<li class="fragment">En el navegador, ir a: <pre style="display: inline;">localhost/[nombre_app]</pre></li>
+					<li class="fragment">Empieza la diversión!!</li>
+				</ol>
+			</section>
+
+			<section>
+				<h3>Esqueleto de la aplicación</h3>
+				<img src="revealAwesome/img/index.png" height="409" width="955" alt="">
+			</section>
+
+			<section>
+				<h3>Validación automática de campos</h3>
+				<img src="revealAwesome/img/validate.png" height="569" width="954" alt="">
+			</section>
+
+			<section>
+				<h3>Mensajes de Error configurables</h3>
+				<img src="revealAwesome/img/mensajes_error.png" height="562" width="960" alt="">
+			</section>
+
+			<section>
+				<h3>Sistema de Autenticación <br>(casi) nativa</h3>
+				<img src="revealAwesome/img/autenticacion.png" height="415" width="959">
+			</section>
+
+			<section>
+				<h1>Es gratis!!!</h1>
+				<img src="revealAwesome/img/its-free-template.jpg" height="458" width="550">
+			</section>
+
+			<section>
+				<h2>Manos a la ubre...</h2>
+				<img src="revealAwesome/img/ubre.jpg" height="503" width="670" alt="">
+			</section>
+
+			<section>
+				<h2>Día 2. <br> Ilustrar el <br> Flujo de Componentes <br> en Yii Framework</h2>
+			</section>
+
+			<section>
+				<h2>Antes... ¡Publicidad!</h2>
+				<img src="revealAwesome/img/performance-yii.png" height="484" width="769">
+			</section>
+
+			<section>
+				<h2>Arquitectura de Yii</h2>
+				<img src="revealAwesome/img/structure.png" height="500" width="600">
+			</section>
+
+			<section>
+				<h2>Carpetas de <br>nuestro proyecto en Yii</h2>
+				<div style="float: left;">
+					<img src="revealAwesome/img/yii_carpetas.png" height="400" width="500">
+				</div>
+				<div style="float: left;">
+					<ul>
+						<li class="fragment"><code>assets</code>: Librerias externas <br>(JavaScript...)</li>
+						<li class="fragment"><code>css</code>: Hojas de Estilo <br> externas (Bootstrap...)</li>
+						<li class="fragment"><code>images</code>: ...</li>
+						<li class="fragment"><code>protected</code>: Core de la <br>aplicación (Modelos, Vistas...)</li>
+						<li class="fragment"><code>themes</code>: Layouts extra para <br>la aplicación</li>
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<h2>Carpetas del Core de <br> nuestro proyecto en Yii</h2>
+				<div style="float: left;">
+					<img src="revealAwesome/img/yii-protected.png" height="400" width="500">
+				</div>
+				<div style="float: right;" width="200">
+					<ul>
+						<li class="fragment"><code>components</code>: Componentes <br>internos de Yii</li>
+						<li class="fragment"><code>config</code>: Configuración del <br>entorno</li>
+						<li class="fragment"><code>controllers, models,<br> views</code></li>
+						<li class="fragment"><code>data</code>: Scripts Base de Datos</li>
+						<li class="fragment"><code>extensions</code>: Componentes<br>	 externos de Yii</li>
+						<li class="fragment"><code>messages</code>: Traducciones</li>
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<h2>Manos a la ubre...</h2>
+				<img src="revealAwesome/img/ubre.jpg" height="503" width="670" alt="">
+			</section>
+
+			<section>
+				<h2>Día 3. <br> Ilustrar el Flujo <br> de Componentes Internos <br>en Yii Framework</h2>
+			</section>
+
+			<section>
+				<h3>Flujo de Componentes Internos</h3>
+					<div width="1100">
+						<img src="revealAwesome/img/yiiFlujoTareas.png" height="520" width="420" style="float:left;">
+					<ol style="float:left; margin-left:55px; font-size: 0.8em;">
+						<li class="fragment"><code>index.php</code> gestiona la solicitud</li>
+						<li class="fragment">se instancia <code>application</code></li>
+						<li class="fragment"><code>application</code> tramita el <code>request</code></li>
+						<li class="fragment"><code>request</code> es transformado por <br><code>urlManager</code></li>
+						<li class="fragment"><code>application</code> envia el <code>request</code></li>
+						<li class="fragment">7. 8. <code>controller</code>/<code>filter</code>/<code>action</code> <br>para un <code>request</code>, renderizar <code>view</code> y <br>recibir datos de <code>model</code></li>
+						<li class="fragment" value="9">si lo necesita, <code>view</code> se sirve de <code>widget</code></li>
+						<li class="fragment"><code>view</code> solicita <code>layout</code> (mediante <code>filter</code>)</li>
+						<li class="fragment">la solicitud es devuelta via <code>controller</code></li>
+					</ol>
+				</div>
+			</section>
+
+			<section>
+				<h2>Manos a la ubre...</h2>
+				<img src="revealAwesome/img/ubre.jpg" height="503" width="670" alt="">
+			</section>
+
+			<section>
+				<h2>Día 4. <br> Ilustrar el Uso de <br> Componentes Externos en Yii Framework</h2>
+			</section>
+
+			<section>
+				<h2>ANTES DE EMPEZAR!!!</h2>
+				<p class="fragment">Todas las extensiones y/o componentes externos se guardan en la ruta: <br><code>[nombre/del/proyecto]/protected/extensions/</code></p>
+			</section>
+
+			<section>
+				<h2>Componentes Externos <br>a Utilizar</h2>
+				<ol>
+					<li class="fragment"><code>qrcode</code></li>
+					<li class="fragment"><code>PHPExcel</code></li>
+					<li class="fragment"><code>mPDF</code></li>
+					<li class="fragment"><code>CRUGE</code></li>
+					<li class="fragment"><code>CComprobador</code></li>
+				</ol>
+			</section>
+
+			<section>
+				<h2>Manos a la ubre...</h2>
+				<img src="revealAwesome/img/ubre.jpg" height="503" width="670" alt="">
+			</section>
+
+			<section>
+				<h2>Día 5. <br> Ilustrar el Desarrollo <br>Front-End en <br>Yii Framework</h2>
+			</section>
+
+			<section>
+				<div style="font-size: 1.1em;" class="fragment">Yii Framework renderiza el front-end por medio de <code>layouts</code>:</div><br>
+				<ul>
+					<li class="fragment">Un <code>layout</code> es el esqueleto visual de la aplicación.</li>
+					<li class="fragment">Es auto-contenido, esto es, toda la aplicación está contenida dentro de él.</li>
+					<li class="fragment">Los <code>layouts</code> residen en dos lugares diferentes de la aplicación (no ambos a la vez):
+						<ol>
+							<li style="font-size: 0.8em;" class="fragment"><code>[nombre/del/proyecto]/protected/views/layouts</code> (por defecto)</li>
+							<li style="font-size: 0.8em;" class="fragment"><code>[nombre/del/proyecto]/themes/layouts</code> (personalizables)</li>
+						</ol>
+					</li>
+					<li class="fragment">Personalizable desde el controlador principal determinado en <code>config/main.php</code></li>
+					<li class="fragment">Cambian las vistas de la aplicación, no el <code>layout</code>.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3><code>layout</code> por defecto</h3>
+				<img src="revealAwesome/img/index.png" height="409" width="955" alt="">
+			</section>
+
+			<section>
+				<h3><code>layout</code> con un poco de ayuda ;)</h3>
+				<video src="comunas.webm"></video>
+			</section>
+
+			<section>
+				<h2>Manos a la ubre...</h2>
+				<img src="revealAwesome/img/ubre.jpg" height="503" width="670" alt="">
+			</section>
+
+		</div>
+	</div>
+
+	<!-- AREA DE CARGA DE SCRIPTS -->
+	<script src="revealAwesome/lib/js/head.min.js"></script>
+	<script src="revealAwesome/js/reveal.js"></script>
+	<script>
+		Reveal.initialize({
+			width: 1024,
+			controls: true,
+			progress: true,
+			history: true,
+			transition: 'default',
+			dependencies: [
+				{
+					src: 'revealAwesome/plugin/highlight/highlight.pack.js',
+					async: true,
+					callback: function(){hljs.initHighlightingOnLoad();}
+				}
+			]
+		});
+	</script>
+</body>
+</html>
