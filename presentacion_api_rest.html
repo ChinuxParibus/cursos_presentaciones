@@ -5,24 +5,21 @@
 	<link rel="stylesheet" href="revealAwesome/css/reveal.css">
 	<link rel="stylesheet" href="revealAwesome/css/theme/night.css">
 	<link rel="stylesheet" href="revealAwesome/plugin/highlight/styles/monokai_sublime.css">
-	<style>
-		figure { display: table; }
-		img, figcaption { display: table-cell; vertical-align: middle ;}
-	</style>
 	<title>El Poder de las API REST</title>
 </head>
 <body>
 	<div class="reveal">
 		<div class="slides">
 			<section data-background="revealAwesome/img/rangers-background.jpg">
-				<h1>El Poder de las <br> API REST</h1><span style="font-size: 2.5em; margin-top: 300px; display: block;">Jhony Grillet</span>
+				<h1>El Poder de las <br> API REST y el <br> Gobierno Abierto</h1><span style="font-size: 2.5em; margin-top: 300px; display: block;">Jhony Grillet</span>
 			</section>
 
 			<section>
 				<img src="revealAwesome/img/me.jpg" height="200" width="200" alt="">
 				<h2>Jhony Grillet</h2>
-				<p>Desarrollador Javascript</p>
-				<span>(a.k.a. <a href="#">Ch1nux Par1bus</a>)</span><br><br>
+				<p>Geek, Profesor, "Knowmad" Javascript y La Colonia Tovar...</p>
+				<p>¡Chocolate y Javascript en todas las cosas!</p>
+				<span>(a.k.a. <a href="https://chinuxparibus.github.io/portfolio" target="_blank">Ch1nux Par1bus</a>)</span><br><br>
 				<figure style="float: left; margin: 0 2em 2em 9em;">
 					<img src="revealAwesome/img/github.jpg" height="100" width="100" alt="" style="vertical-align: middle;">
 					<figcaption><a href="http://github.com/chinuxparibus">chinuxparibus</a></figcaption>
@@ -32,7 +29,7 @@
 					<figcaption><a href="http://twitter.com/ch1nux">@ch1nux</a></figcaption>
 				</figure>
 				<figure style="float: left; margin: 0 2em 2em 0;">
-					<img src="revealAwesome/img/wordpress.jpg" height="100" width="100" alt=""><figcaption><a href="http://jotaeseymas.wordpress.com">jotaeseymas</a></figcaption>
+					<img src="revealAwesome/img/wordpress.jpg" height="100" width="100" alt="" style="vertical-align: middle;"><figcaption><a href="http://jotaeseymas.wordpress.com">&nbsp;jotaeseymas</a></figcaption>
 				</figure>
 			</section>
 
@@ -43,8 +40,8 @@
 
 			<section>
 				<h2>¿Algun@ se acuerda de esto?</h2>
-				<video src="Mighty Morphin Power Rangers First Fight and Morph.mp4"
-				width="800"></video><br>
+				<video src="revealAwesome/video/cut.mp4"
+				width="640" height="480"></video><br>
 				<h2>¡Yo si!</h2>
 			</section>
 
@@ -172,7 +169,7 @@
 					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Cada recurso es un método a ser procesado en otro <br>servidor</li>
 					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">No es paginable pero si parametrizable <br><br><code class="fragment">datos.com/metodo?valor1="valor"&valor2=2&token=5b...</code></li>
 					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Lenta en peticiones, "más lenta" en masificaciones</li>
-					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Elevado consumo de ancho de banda, con alta demanda <br><br>transaccional</li>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Elevado consumo de ancho de banda, con alta demanda <br>transaccional</li>
 					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Rendimiento de intercambio de información supeditado <br><br>a la conexión cliente-servidor</li>
 				</ul>
 			</section>
@@ -223,24 +220,39 @@
 			</section>
 
 			<section>
+				<h2>¿Qué es Gobierno Abierto?</h2>
+				<img src="revealAwesome/img/power-open-government.png" class="fragment" alt="" width="800">
+			</section>
+
+			<section>
+				<h2>Gobierno Abierto</h2>
+				<ol>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Involucrar directamente al pueblo en decisiones políticas.</li>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Empoderamiento de la gente, activa y protagónicamente mediante el uso abierto de datos relevantes del Estado.</li>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Usar medios digitales, electrónicos y tecnológicos para la transformación de la comunidad.</li>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;">Valores del Software Libre incorporados en el ejercicio de la democracia.</li>
+				</ol>
+			</section>
+
+			<section>
 				<h2>API REST y Gobierno Abierto</h2><br>
 				<h3>En el viejo continente...</h3><br>
 				<ul>
-					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;"><strong>Holanda:</strong> API REST de salud para universalizar las historias médicas de los pacientes.</li>
-					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;"><strong>Escocia e Irlanda del Norte:</strong> API REST de datos judiciales. Recopilación de leyes e historial de casos de interdicción civil</li>
-					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;"><strong>Islas Canarias:</strong> Universalización de la gestión municipal mediante API REST interoperadas</li>
-					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;"><strong>India:</strong> Registro público de más de 5 mil API REST (de todos los tipos) alojadas en servidores en ese país</li>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 1em;"><strong>Holanda:</strong> API REST de salud para universalizar las historias médicas de los pacientes.</li>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 1em;"><strong>Escocia e Irlanda del Norte:</strong> API REST de datos judiciales. Recopilación de leyes e historial de casos de interdicción civil</li>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 1em;"><strong>Islas Canarias:</strong> Universalización de la gestión municipal mediante API REST interoperadas</li>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 1em;"><strong>India:</strong> Registro público de más de 5 mil API REST (de todos los tipos) alojadas en servidores en ese país</li>
 				</ul>
 			</section>
 
 			<section>
 				<h2>API REST y Gobierno Abierto</h2><br>
-				<h3>...de este lado del charco</h3>
+				<h3>...de este lado del mundo</h3>
 				<ul>
-					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;"><strong>Guatemala:</strong> API REST anti-corrupción donde se muestra periódicamente la inversión pública</li>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;"><strong>Guatemala y El Salvador:</strong> API REST anti-corrupción donde se muestra periódicamente la inversión pública</li>
 					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;"><strong>Panamá:</strong> Núcleo de transacciones bancarias único y universal (independiente de las plataformas de las agencias bancarias)</li>
 					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;"><strong>Argentina y Chile:</strong> Sistema universal de elecciones. Resultados en tiempo real (API REST de detección)</li>
-					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;"><strong>Colombia:</strong> API REST de detección para seguimiento y control de rutas de transporte público masivo (¡es Ley!)</li>
+					<li class="fragment" style="font-size: 1.5em; margin-bottom: 0.5em;"><strong>Colombia:</strong> API REST para universalización de expedientes laborales de servidores públicos.</li>
 				</ul>
 			</section>
 
@@ -281,7 +293,7 @@
 			</section>
 
 			<section>
-				<h2>API REST y el Software Libre</h2>
+				<h2>API REST y Software Libre</h2>
 				<h3>¡Hay para elegir!</h3>
 				<img src="revealAwesome/img/all-rangers-in-da-club.jpg" width="700" alt="">
 			</section>
