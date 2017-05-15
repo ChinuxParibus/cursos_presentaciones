@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="revealAwesome/css/reveal.css">
+	<link rel="stylesheet" href="revealAwesome/css/theme/sky.css">
+	<link rel="stylesheet" href="revealAwesome/plugin/highlight/styles/monokai_sublime.css">
+	<link rel="stylesheet" href="revealAwesome/lib/css/font-awesome/css/font-awesome.css">
+	<style>
+		#copyright{
+			-webkit-transform: rotate(180deg);
+			-ms-transform: rotate(180deg);
+			-o-transform: rotate(180deg);
+			transform: rotate(180deg);
+			display: inline-block;
+			line-height: 35px;
+		}
+	</style>
+	<title>WTP - Wat da... PHP</title>
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+			<section>
+				<img src="revealAwesome/img/demo_faker_php.png" height="315" width="420"><br><br>
+				<h2><code style="text-transform: lowercase;">echo "Wat da... PHP";</code></h2><br><br>
+				<h4><span id="copyright">&copy;</span> Copyleft Jhony Grillet</h4>
+			</section>
+
+			<section>
+				<h2>¡Advertencia!</h2>
+				<img src="revealAwesome/img/Awful-Memes-Awful.jpg" height="480" width="840" alt="">
+			</section>
+
+			<section>
+				<img src="revealAwesome/img/me.jpg" height="200" width="200" alt="">
+				<h2>Jhony Grillet</h2>
+				<p>Geek, Profesor, "Knowmad" Javascript y La Colonia Tovar...</p>
+				<p>¡Chocolate y Javascript en todas las cosas!</p>
+				<span>(a.k.a. <a href="https://chinuxparibus.github.io/portfolio" target="_blank">Ch1nux Par1bus</a>)</span><br>
+				<figure style="float: left; margin: 0 1em 1em 5em;">
+					<img src="revealAwesome/img/github.jpg" height="100" width="100" alt="" style="vertical-align: middle;">
+					<figcaption><a href="http://github.com/chinuxparibus">chinuxparibus</a></figcaption>
+				</figure>
+				<figure style="float: left; margin: 0 1em 1em 0;">
+					<img src="revealAwesome/img/twitter.jpg" height="100" width="100" alt="" style="vertical-align: middle;">
+					<figcaption><a href="http://twitter.com/ch1nux">@ch1nux</a></figcaption>
+				</figure>
+				<figure style="float: left; margin: 0 2em 2em 0;">
+					<img src="revealAwesome/img/wordpress.jpg" height="100" width="100" alt="" style="vertical-align: middle;"><figcaption><a href="http://jotaeseymas.wordpress.com">&nbsp;jotaeseymas</a></figcaption>
+				</figure>
+			</section>
+
+			<section>
+				<h2>PHP es...</h2>
+				<ol style="float: left;">
+					<li class="fragment" style="font-size: 1.2em; margin-bottom: 0.5em;">Lenguaje interpretado.</li>
+					<li class="fragment" style="font-size: 1.2em; margin-bottom: 0.5em;">Orientado a Objetos.</li>
+					<li class="fragment" style="font-size: 1.2em; margin-bottom: 0.5em;">"Creado" por Rasmus Lerdorf.</li>
+					<li class="fragment" style="font-size: 1.2em; margin-bottom: 0.5em;">Embebido. <span class="fragment">(código HTML + PHP)</span></li>
+					<li class="fragment" style="font-size: 1.2em; margin-bottom: 0.5em;">Referente en la web. (+60% de páginas web)</li>
+					<li class="fragment" style="font-size: 1.2em; margin-bottom: 0.5em;">Más utilizado en apps web, CMS, Blogs, R.R.S.S, etc.</li>
+					<li class="fragment" style="font-size: 1.2em; margin-bottom: 0.5em;">SocialGest <span class="fragment">(&lt;- Publicidad gratuita ;) )</span></li>
+				</ol>
+			</section>
+
+			<section>
+				<h2>Antes de comenzar...</h2>
+				<h1 class="fragment" style="color: green;">¡NO estoy en contra de PHP!</h1>
+			</section>
+
+			<section>
+				<h2>Python es un...</h2>
+				<img src="revealAwesome/img/python.png" height="600" width="600" alt="">
+			</section>
+
+			<section>
+				<h2>Ruby es un...</h2>
+				<img src="revealAwesome/img/1200px-Ruby_logo.svg.png" height="600" width="600" alt="">
+			</section>
+
+			<section>
+				<h2>Perl es un...</h2>
+				<img src="revealAwesome/img/Perl.gif" height="326" width="643" alt="">
+			</section>
+
+			<section>
+				<h2>PHP es un...</h2>
+				<img src="revealAwesome/img/demo_faker_php.png" height="530" width="740" alt="">
+			</section>
+
+			<section>
+				<img src="revealAwesome/img/wat-dog.jpg" height="500" width="500" alt="">
+			</section>
+
+			<section>
+				<h3>Pienso en elefante, <br>pienso en... ¿memoria?</h3>
+				<img src="revealAwesome/img/gestion-memoria-wat.png" height="528" width="926" alt="">
+			</section>
+
+			<section>
+				<img src="revealAwesome/img/wat-memoria.jpg" height="560" width="700" alt="">
+			</section>
+
+			<section>
+				<h2>Vale, hablemos de código</h2>
+				<pre class="fragment"><code class="php" style="font-size: 18px;">
+					&lt;?php
+						&nbsp;&nbsp;$a = 0;
+						&nbsp;&nbsp;$b = 'yolo';
+					?&gt;
+				</code></pre>
+				<pre class="fragment"><code class="php">
+					&lt;?php
+						&nbsp;&nbsp;echo $a == FALSE; // TRUE :)
+					?&gt;
+				</code></pre>
+				<pre class="fragment"><code class="php">
+					&lt;?php
+						&nbsp;&nbsp;echo $b == TRUE; // TRUE :|
+					?&gt;
+				</code></pre>
+				<pre class="fragment"><code class="php">
+					&lt;?php
+						&nbsp;&nbsp;echo $b == $a; // TRUE :O
+					?&gt;
+				</code></pre>
+			</section>
+
+			<section>
+				<h2>¿TRUE == FALSE?</h2>
+				<img src="revealAwesome/img/wat-variable.gif" height="466" width="600" alt="">
+			</section>
+
+			<section>
+				<h2>Ok, hablemos de strings...</h2><br>
+				<ul>
+					<li class="fragment" style="font-size: 1.2em; margin-bottom: 0.5em;"><code style="text-transform: lowercase;">trim</code>: Quita espacios al inicio y fin de un string.</li>
+					<li class="fragment" style="font-size: 1.2em; margin-bottom: 0.5em;"><code style="text-transform: lowercase;">explode</code>: Convierte un string en un array de caracteres o palabras según un patrón.</li>
+					<li class="fragment" style="font-size: 1.2em; margin-bottom: 0.5em;"><code style="text-transform: lowercase;">implode</code>: Convierte los valores de un array en un string según un patrón.</li>
+					<li class="fragment" style="font-size: 1.2em; margin-bottom: 0.5em;"><code style="text-transform: lowercase;">join</code>: Alias de <code style="text-transform: lowercase;">implode</code>.</li>
+					<li class="fragment" style="font-size: 1.2em; margin-bottom: 0.5em;"><code style="text-transform: lowercase;">levenshtein</code>: Calcula la distancia Levenshtein entre dos strings.</li>
+					<li class="fragment" style="font-size: 1.2em; margin-bottom: 0.5em;">¿<code style="text-transform: lowercase;">strstr</code>, <code style="text-transform: lowercase;">stristr</code>, <code style="text-transform: lowercase;">strcspn</code>, <code style="text-transform: lowercase;">stripos</code>, <code style="text-transform: lowercase;">strpbrk</code>?</li>
+				</ul>
+			</section>
+
+			<section>
+				<img src="revealAwesome/img/wait-wat.jpg" height="560" width="752" alt="">
+			</section>
+
+			<section>
+				<h2>Una curiosidad [creo que] ÚNICA de PHP...</h2>
+				<pre class="fragment"><code class="php">
+					&lt;?php
+						&nbsp;&nbsp;$a = 'a';
+						&nbsp;&nbsp;echo ++$a; // str('b')
+					?&gt;
+				</code></pre>
+				<pre class="fragment"><code class="php">
+					&lt;?php
+						&nbsp;&nbsp;$z = 'z';
+						&nbsp;&nbsp;echo ++$z; // str('aa')
+					?&gt;
+				</code></pre>
+				<pre class="fragment"><code class="php">
+					&lt;?php
+						&nbsp;&nbsp;for ($i = 1; $i &lt;= 'z'; ++$i) {
+						&nbsp;&nbsp;&nbsp;&nbsp;echo "$i ";
+						&nbsp;&nbsp;}
+					?&gt;
+				</code></pre>
+			</section>
+
+			<section>
+				<pre><code class="php">
+					a b c d e f g h i j k l m n o p q r s t u v w x y z aa ... yx yy yz
+				</code></pre>
+			</section>
+
+			<section>
+				<img src="revealAwesome/img/dude-wat.jpg" height="600" width="600" alt="">
+			</section>
+
+			<section>
+				<h2>PHP soporta Unicode <br>en el código, así que...</h2>
+				<img class="fragment" src="revealAwesome/img/unicode-support.png" height="494" width="464" alt="">
+			</section>
+
+			<section>
+				<img src="revealAwesome/img/sea-Wat.jpg" height="646" width="800" alt="">
+			</section>
+
+			<section>
+				<h2>Seamos honestos</h2><br>
+				<p class="fragment">TODOS los lenguajes de programación tienen inconsistencias...</p><br>
+				<p class="fragment">Lo que hace grande a un lenguaje de programación, es la comunidad, es la gente...</p><br>
+			</section>
+
+			<section>
+				<h3>¡Hagamos que la gente diga!</h3>
+				<img src="revealAwesome/img/wat-is-love.gif" height="546" width="892" alt="">
+			</section>
+		</div>
+	</div>
+
+	<!-- AREA DE CARGA DE SCRIPTS -->
+	<script src="revealAwesome/lib/js/head.min.js"></script>
+	<script src="revealAwesome/js/reveal.js"></script>
+	<script>
+		Reveal.initialize({
+			width: 1024,
+			controls: true,
+			progress: true,
+			history: true,
+			transition: 'default',
+			dependencies: [
+				{
+					src: 'revealAwesome/plugin/highlight/highlight.pack.js',
+					async: true,
+					callback: function(){hljs.initHighlightingOnLoad();}
+				}
+			]
+		});
+	</script>
+</body>
+</html>
